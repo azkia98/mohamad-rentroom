@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Azkia\AdminUI\AdminUIServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -174,9 +174,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Class Aliases

@@ -4,8 +4,37 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94d4bf9ac7f4a933030e46a346ee2917",
+    "content-hash": "eea8a21853eb9273d4a57cae63ff7e1a",
     "packages": [
+        {
+            "name": "azkia/admin-ui",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/azkia98/persian-admin-panel-files-laravel.git",
+                "reference": "9e7312201b955a5984051e08d0b6a0742ba3b4ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/azkia98/persian-admin-panel-files-laravel/zipball/9e7312201b955a5984051e08d0b6a0742ba3b4ad",
+                "reference": "9e7312201b955a5984051e08d0b6a0742ba3b4ad",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Azkia\\AdminUI\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Mahdi Ebrahimi",
+                    "email": "azkia@iran.ir"
+                }
+            ],
+            "time": "2019-05-30T12:01:38+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
@@ -4412,7 +4441,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "azkia/admin-ui": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
