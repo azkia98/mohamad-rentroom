@@ -16,7 +16,9 @@
           <th scope="row">{{ ++$loop->index }}</th>
           <td>{{ $education->title }}</td>
           <td>
-            <form class="d-inline-block" action="{{ route('admin.educations.destroy', ['id'=>$education->id]) }}">
+            <form class="d-inline-block" method="POST" action="{{ route('admin.educations.destroy', ['id'=>$education->id]) }}">
+              @csrf()
+              @method('DELETE')
               <button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash"></i></button>
             </form>
             <a href="{{ route('admin.educations.edit', ['id'=>$education->id]) }}" class="btn btn-info btn-sm">

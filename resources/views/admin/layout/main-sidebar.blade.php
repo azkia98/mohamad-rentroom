@@ -37,9 +37,10 @@
                   </p>
                 </a>
               </li>
+              {{-- Educations --}}
               <li class="nav-item has-treeview  @activeRoute('admin.educations.create','admin.educations.index') menu-open @endactiveRoute">
                   <a href="#" class="nav-link @activeRoute('admin.educations.create','admin.educations.index') active @endactiveRoute">
-                <i class="nav-icon fa fa-dashboard"></i>
+                <i class="nav-icon fa fa-graduation-cap"></i>
                 <p>
                   مدارک
                   <i class="right fa fa-angle-left"></i>
@@ -60,6 +61,33 @@
                 </li>
               </ul>
             </li>
+            {{-- Educations --}}
+            {{-- Teachers --}}
+            <li class="nav-item has-treeview  @activeRoute('admin.teachers.create','admin.teachers.index') menu-open @endactiveRoute">
+                <a href="#" class="nav-link @activeRoute('admin.teachers.create','admin.teachers.index') active @endactiveRoute">
+              <i class="nav-icon fa fa-users"></i>
+              <p>
+                اساتید 
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('admin.teachers.index') }}" class="nav-link @activeRoute('admin.teachers.index') active @endactiveRoute">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>مشاهده تمام اساتید</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('admin.teachers.create') }}" class="nav-link @activeRoute('admin.teachers.create') active @endactiveRoute">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>ساخت یک استاد جدید</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          {{-- Teachers --}}
+
           </ul>
         </nav>
         <!-- /.sidebar-menu -->
