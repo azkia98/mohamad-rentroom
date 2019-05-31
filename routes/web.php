@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::get('/dashboard',function(){
     return view('admin.dashboard');
 });
+
+
+Route::name('admin.')->prefix('admin')->namespace('Admin')->group(function(){
+    Route::get('','AdminPanelController@dashboard')->name('dashboard');
+    Route::resource('educations','EducationsController');
+});

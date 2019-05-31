@@ -31,6 +31,9 @@
   <!-- template rtl version -->
   <link rel="stylesheet" href="/admin/dist/css/custom-style.css">
 
+  {{--  My links  --}}
+  <script src="{{ asset('js/app.js') }}"></script>
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -59,6 +62,9 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
+    <div class="container-fluid">
+      @include('admin.layout.err')
+    </div>
     <section class="content">
         @yield('content')
     </section>
@@ -118,3 +124,4 @@
 </html>
 
 @yield('scripts')
+@include('sweet::alert')

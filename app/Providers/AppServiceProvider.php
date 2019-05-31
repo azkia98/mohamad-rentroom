@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Route;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Blade::if('activeRoute', function ($route_name, $route_name2 = null) {
+            if (Route::currentRouteName() == $route_name or Route::currentRouteName() == $route_name2)
+                return true;
+        });
     }
 }
