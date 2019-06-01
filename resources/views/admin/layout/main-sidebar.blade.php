@@ -62,9 +62,10 @@
               </ul>
             </li>
             {{-- Educations --}}
+
             {{-- Teachers --}}
-            <li class="nav-item has-treeview  @activeRoute('admin.teachers.create','admin.teachers.index') menu-open @endactiveRoute">
-                <a href="#" class="nav-link @activeRoute('admin.teachers.create','admin.teachers.index') active @endactiveRoute">
+            <li class="nav-item has-treeview  @activeRoute('admin.teachers.create','admin.teachers.index','admin.teachers.edit') menu-open @endactiveRoute">
+                <a href="#" class="nav-link @activeRoute('admin.teachers.create','admin.teachers.index','admin.teachers.edit') active @endactiveRoute">
               <i class="nav-icon fa fa-users"></i>
               <p>
                 اساتید 
@@ -87,6 +88,32 @@
             </ul>
           </li>
           {{-- Teachers --}}
+
+          {{-- Rooms --}}
+          <li class="nav-item has-treeview  @activeRoute('admin.rooms.create','admin.rooms.index','admin.rooms.edit') menu-open @endactiveRoute">
+              <a href="#" class="nav-link @activeRoute('admin.rooms.create','admin.rooms.index','admin.rooms.edit') active @endactiveRoute">
+            <i class="nav-icon fa fa-building"></i>
+            <p>
+              اتاق ها
+              <i class="right fa fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="{{ route('admin.rooms.index') }}" class="nav-link @activeRoute('admin.rooms.index') active @endactiveRoute">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>مشاهده تمام اتاق ها</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ route('admin.rooms.create') }}" class="nav-link @activeRoute('admin.rooms.create') active @endactiveRoute">
+                <i class="fa fa-circle-o nav-icon"></i>
+                <p>ساخت یک اتاق جدید</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        {{-- rooms --}}
 
           </ul>
         </nav>
