@@ -50,6 +50,8 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Room whereProjector($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Room whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $lessons
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $users
  */
 	class Room extends \Eloquent {}
 }
@@ -72,6 +74,36 @@ namespace App\Models{
  * @mixin \Eloquent
  */
 	class Lesson extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Rent
+ *
+ * @property int $id
+ * @property int $room_id
+ * @property int $user_id
+ * @property int $lesson_id
+ * @property string $start_at
+ * @property string $end_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Lesson $lesson
+ * @property-read \App\Models\Room $room
+ * @property-read \App\User $user
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Rent newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Rent newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Rent query()
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Rent whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Rent whereEndAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Rent whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Rent whereLessonId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Rent whereRoomId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Rent whereStartAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Rent whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Rent whereUserId($value)
+ */
+	class Rent extends \Eloquent {}
 }
 
 namespace App{
@@ -110,6 +142,9 @@ namespace App{
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUpdatedAt($value)
  * @mixin \Eloquent
  * @property-read \App\Models\Education|null $education
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Lesson[] $lessons
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Room[] $rooms
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User teachers()
  */
 	class User extends \Eloquent {}
 }

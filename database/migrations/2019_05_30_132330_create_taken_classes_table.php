@@ -15,7 +15,7 @@ class CreateTakenClassesTable extends Migration
     {
         Schema::create('taken_classes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('class_id');
+            $table->unsignedBigInteger('room_id');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('lesson_id');
             $table->dateTime('start_at');

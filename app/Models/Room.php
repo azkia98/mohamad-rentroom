@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\User;
 
 /**
  * App\Models\Room
@@ -23,8 +24,19 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Room whereProjector($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Room whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $lessons
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\User[] $users
  */
 class Room extends Model
 {
-    
+
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'taken_classes');
+    }
+
+    public function lessons(){
+        return $this->belongsToMany(User::class,'taken_classes');
+    }
 }

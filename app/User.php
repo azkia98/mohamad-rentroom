@@ -6,6 +6,8 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\Education;
+use App\Models\Room;
+use App\Models\Lesson;
 
 /**
  * App\User
@@ -41,6 +43,11 @@ use App\Models\Education;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereTeacher($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\User whereUpdatedAt($value)
  * @mixin \Eloquent
+ * @property-read \App\Models\Education|null $education
+ * @property-read mixed $full_name
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Lesson[] $lessons
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Room[] $rooms
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\User teachers()
  */
 class User extends Authenticatable
 {
@@ -77,5 +84,34 @@ class User extends Authenticatable
     public function education()
     {
         return $this->belongsTo(Education::class);
+    }
+
+    public function rooms()
+    {
+        return $this->belongsToMany(Room::class, 'taken_classes');
+    }
+
+    public function lessons()
+    {
+        return $this->belongsToMany(Lesson::class, 'taken_classes');
+    }
+
+
+    // Mutators -------------------
+
+    public function getFullNameAttribute()
+    {
+        return "{$this->name} {$this->familyname}";
+    }
+
+
+
+
+    // Scopes -------------------
+
+
+    public function scopeTeachers($query)
+    {
+        return $query->whereTeacher(true);
     }
 }

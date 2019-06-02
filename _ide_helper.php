@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.8.19 on 2019-05-31 21:57:34.
+ * Generated for Laravel 5.8.19 on 2019-06-02 10:00:59.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -14543,6 +14543,18 @@ namespace Illuminate\Support {
  
 }
 
+namespace Hekmatinasser\Verta { 
+
+    /**
+     * 
+     *
+     */ 
+    class Verta {
+         
+    }
+ 
+}
+
 namespace UxWeb\SweetAlert { 
 
     /**
@@ -17424,6 +17436,8 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
+
+    class Verta extends \Hekmatinasser\Verta\Verta {}
 
     class Alert extends \UxWeb\SweetAlert\SweetAlert {}
  

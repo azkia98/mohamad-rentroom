@@ -27,4 +27,5 @@ Route::name('admin.')->prefix('admin')->namespace('Admin')->group(function(){
     Route::resource('educations','EducationsController');
     Route::resource('teachers','TeachersController');
     Route::resource('rooms','RoomsController');
+    Route::resource('rents','RentsController');
 });

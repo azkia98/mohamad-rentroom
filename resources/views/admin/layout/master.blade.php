@@ -33,6 +33,8 @@
 
   {{--  My links  --}}
   <script src="{{ asset('js/app.js') }}"></script>
+  <link rel="stylesheet" href="https://unpkg.com/persian-datepicker@latest/dist/css/persian-datepicker.min.css"/>
+ 
 
 </head>
 <body class="hold-transition sidebar-mini">
@@ -117,6 +119,8 @@
 <script src="/admin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/admin/dist/js/demo.js"></script>
+<script src="https://unpkg.com/persian-date@latest/dist/persian-date.min.js"></script>
+<script src="https://unpkg.com/persian-datepicker@latest/dist/js/persian-datepicker.min.js"></script> 
 </body>
 </html>
 
