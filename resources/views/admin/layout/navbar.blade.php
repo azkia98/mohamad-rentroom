@@ -24,6 +24,10 @@
 
     <!-- Right navbar links -->
     <a href="{{ route('admin.excel.export') }}" class="btn btn-sm btn-secondary mr-auto">خروجی اکسل</a>
+    <form class="form-inline" action="{{ route('logout') }}" method="POST">
+      @csrf
+      <button type="submit" class="btn btn-sm btn-danger mr-1">خروج</button>
+    </form>
     {{-- <ul class="navbar-nav mr-auto"> --}}
       <!-- Messages Dropdown Menu -->
       {{-- <li class="nav-item dropdown">

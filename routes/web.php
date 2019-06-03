@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 
-Route::name('admin.')->prefix('admin')->namespace('Admin')->group(function(){
+Route::middleware('auth')->name('admin.')->prefix('admin')->namespace('Admin')->group(function(){
     Route::get('','AdminPanelController@dashboard')->name('dashboard');
     Route::resource('educations','EducationsController');
     Route::resource('teachers','TeachersController');
@@ -31,3 +31,6 @@ Route::name('admin.')->prefix('admin')->namespace('Admin')->group(function(){
         Route::get('import','ExcelController@importForm')->name('import.form');
     });
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

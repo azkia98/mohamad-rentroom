@@ -9,7 +9,7 @@ use Carbon\Carbon;
 $factory->define(Rent::class, function (Faker $faker) {
     $start_time = $faker->dateTimeBetween('now','+1 day');
     // $end_at = Carbon::parse($start_time)->addHours(rand(1,3));
-    $end_at = Carbon::parse($start_time->getTimestamp())->addHours(rand(1,3));
+    $end_at = Carbon::parse($start_time->format('Y-m-d H:i'))->addHours(rand(1,3));
     // $end_at = now()->parse();
     return [
         'room_id' => rand(1,15),
