@@ -130,10 +130,11 @@
           {{-- rooms --}}
 
           {{-- Rents --}}
-          <li class="nav-item has-treeview  @activeRoute('admin.rents.create','admin.rents.index','admin.rents.edit') menu-open @endactiveRoute">
+          <li
+            class="nav-item has-treeview  @activeRoute('admin.rents.create','admin.rents.index','admin.rents.edit') menu-open @endactiveRoute">
             <a href="#"
               class="nav-link @activeRoute('admin.rents.create','admin.rents.index','admin.rents.edit') active @endactiveRoute">
-              <i class="nav-icon fa fa-building"></i>
+              <i class="nav-icon fa fa-clock-o"></i>
               <p>
                 اجاره ها
                 <i class="right fa fa-angle-left"></i>
@@ -158,6 +159,17 @@
           </li>
           {{-- Rents --}}
 
+          {{-- Excel --}}
+          <li class="nav-item">
+            <a href="{{ route('admin.excel.import.form') }}"
+              class="nav-link @activeRoute('admin.excel.import.form') active @endactiveRoute">
+              <i class="nav-icon fa fa-file-excel-o"></i>
+              <p>
+                Excel
+              </p>
+            </a>
+          </li>
+          {{-- Excel --}}
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
