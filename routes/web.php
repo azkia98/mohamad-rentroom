@@ -28,4 +28,9 @@ Route::name('admin.')->prefix('admin')->namespace('Admin')->group(function(){
     Route::resource('teachers','TeachersController');
     Route::resource('rooms','RoomsController');
     Route::resource('rents','RentsController');
+    Route::prefix('excel')->name('excel.')->group(function(){
+        Route::get('export','ExcelController@export')->name('export');
+        Route::post('import','ExcelController@import')->name('import');
+        Route::get('import','ExcelController@importForm')->name('import.form');
+    });
 });

@@ -54,18 +54,17 @@ class User extends Authenticatable
     use Notifiable;
 
     /**
-     * The attributes that are mass assignable.
+     * The attributes that aren't mass assignable.
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password', 'familyname', 'education_id', 'teacher', 'national_code'
-    ];
+    protected $guarded = ['id'];
 
     /**
      * The attributes that should be hidden for arrays.
      *
      * @var array
+     * 
      */
     protected $hidden = [
         'password', 'remember_token',

@@ -26,9 +26,10 @@
     </form>
 
     <!-- Right navbar links -->
-    <ul class="navbar-nav mr-auto">
+    <a href="{{ route('admin.excel.export') }}" class="btn btn-sm btn-secondary mr-auto">خروجی اکسل</a>
+    {{-- <ul class="navbar-nav mr-auto"> --}}
       <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
+      {{-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="fa fa-comments-o"></i>
           <span class="badge badge-danger navbar-badge">3</span>
@@ -84,9 +85,9 @@
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">مشاهده همه پیام‌ها</a>
         </div>
-      </li>
+      </li> --}}
       <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
+      {{-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="fa fa-bell-o"></i>
           <span class="badge badge-warning navbar-badge">15</span>
@@ -111,11 +112,11 @@
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">مشاهده همه نوتیفیکیشن</a>
         </div>
-      </li>
-      <li class="nav-item">
+      </li> --}}
+      {{-- <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
                 class="fa fa-th-large"></i></a>
       </li>
-    </ul>
+    </ul> --}}
   </nav>
   <!-- /.navbar -->

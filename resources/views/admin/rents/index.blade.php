@@ -35,9 +35,9 @@
               @method('DELETE')
               <button class="btn btn-danger btn-sm" type="submit"><i class="fa fa-trash"></i></button>
             </form>
-            <a href="{{ route('admin.rents.edit', ['id'=>$rent->id]) }}" class="btn btn-info btn-sm">
+            {{-- <a href="{{ route('admin.rents.edit', ['id'=>$rent->id]) }}" class="btn btn-info btn-sm">
               <i class="fa fa-edit"></i>
-            </a>
+            </a> --}}
           </td>
         </tr>
       @endforeach
