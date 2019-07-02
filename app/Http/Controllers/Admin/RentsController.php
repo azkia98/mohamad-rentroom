@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Lesson;
 use App\Models\Room;
 use App\User;
+use Carbon\Carbon;
 
 class RentsController extends Controller
 {
@@ -55,12 +56,13 @@ class RentsController extends Controller
 
 
 
+
         $rent = new Rent();
         $rent->user_id = $request->teacher_id;
         $rent->lesson_id = $request->lesson_id;
         $rent->room_id = $request->room_id;
-        $rent->start_at = now()->parse($request->start_at / 1000);
-        $rent->end_at = now()->parse($request->end_at / 1000);
+        $rent->start_at = now()->createFromTimestamp($request->start_at / 1000)->toDateTimeString();
+        $rent->end_at = now()->createFromTimestamp($request->end_at / 1000)->toDateTimeString();
         $rent->save();
 
         alert()->success('اتاق شما با موفقیت رزرو شد!');
