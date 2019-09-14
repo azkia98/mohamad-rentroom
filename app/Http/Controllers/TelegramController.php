@@ -9,7 +9,7 @@ class TelegramController extends Controller
 {
 
     private $webhookUrl = '/651957262:AAELCjsHoPbGxRNcsd4QYSmD964vmQVFH3o/webhook';
-    private $ngrokUrl = 'https://53bf647b.ngrok.io';
+    private $ngrokUrl = 'https://mohamad.liara.run';
 
 
 

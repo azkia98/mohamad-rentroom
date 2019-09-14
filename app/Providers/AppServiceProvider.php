@@ -25,9 +25,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::if('activeRoute', function ($route_name, $route_name2 = null,$route_name3 = null) {
+        Blade::if('activeRoute', function ($route_name, $route_name2 = null, $route_name3 = null) {
             if (Route::currentRouteName() == $route_name or Route::currentRouteName() == $route_name2 or Route::currentRouteName() == $route_name3)
                 return true;
         });
+
+        if ($this->app->environment('production')) {
+            \URL::forceScheme('https');
+        }
     }
 }

@@ -17,7 +17,7 @@ Route::get('/', function () {
 });
 
 
-Route::middleware('auth')->name('admin.')->prefix('admin')->namespace('Admin')->group(function () {
+Route::middleware('auth')->name('admin.')->prefix('panel')->namespace('Admin')->group(function () {
     Route::get('', 'AdminPanelController@dashboard')->name('dashboard');
     Route::resource('educations', 'EducationsController');
     Route::resource('teachers', 'TeachersController');
